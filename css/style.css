@@ -1,0 +1,32 @@
+.site-title {
+	color: rgb(0,151,217);
+	font-family: Courier New, Courier;
+	margin-top: 22px;
+}
+
+.site-title h1, h3 {
+	color: rgb(0,173,238);
+}
+
+.networking-links {
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.networking-links a {
+	border: 0;
+	margin-left: 16px;
+}
+
+.small-networking-links {
+	display: inline;
+	margin-left: 14px;
+}
+
+.small-networking-links img{
+	width: 24px;
+}
+
+.project-list {
+	margin-top: 20px;
+}

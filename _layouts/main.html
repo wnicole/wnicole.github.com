@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% if page.title %} {{ page.title }} | {% endif %}Nicole Worthington, Graphic Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="author" content="Nicole Worthington">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+  {% if page.no-nav != 'true' %}
+  <div class="navbar">
+    <div class="navbar-inner" style="border-radius: 0;">
+      <div class="container">
+        <div class="pull-left hide-on-small-screen">
+          <img class="scaleable-img" src="http://placehold.it/168x120" alt="" />
+        </div>
+
+        <div class="title-and-nav pull-left">
+        
+          <!--<a class="brand" href="#">Project name</a>-->
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class='{% if page.url == "/index.html" %} active{% endif %}'><a class="corner-top" href="index.html">Home</a></li>
+              <li class='{% if page.url == "/about.html" %} active{% endif %}'><a class="corner-top" href="about.html">About</a></li>
+              <li class='{% if page.url == "/blog.html" %} active{% endif %}'><a class="corner-top" href="blog.html">Blog</a></li>
+              <li class='{% if page.url == "/projects.html" %} active{% endif %}'><a class="corner-top" href="projects.html">Projects</a></li>
+              <li class='{% if page.url == "/experiments.html" %} active{% endif %}'><a class="corner-top" href="experiments.html">Experiments</a></li>
+              <li class='{% if page.url == "/resume.html" %} active{% endif %}'><a class="corner-top" href="resume.html">R&eacute;sum&eacute;</a></li>
+              <li class='{% if page.url == "/contact.html" %} active{% endif %}'><a class="corner-top" href="mailto:kyle.a.paulsen@gmail.com">Contact</a></li>
+            </ul>
+            <!--
+            <div class="show-on-small-screen">
+              <a class="small-networking-links" href="mailto:kyle.a.paulsen@gmail.com"><img class="scaleable-img" alt="gmail" src="img/gmail.png"></a>
+              <a class="small-networking-links" href="http://www.linkedin.com/in/kylepaulsen"><img class="scaleable-img" alt="linkedIn" src="img/linkedin.png"></a>
+              <a class="small-networking-links" href="https://plus.google.com/u/0/114927046057873314726"><img class="scaleable-img" alt="google+" src="img/googlep.png"></a>
+              <a class="small-networking-links" href="https://picasaweb.google.com/114927046057873314726"><img class="scaleable-img" alt="picassa" src="img/picassa.png"></a>
+            </div>-->
+          </div><!--/.nav-collapse -->
+        </div>
+        
+        <div class="networking-links pull-right">
+          <!--<div class="hide-on-small-screen">
+            <a href="mailto:kyle.a.paulsen@gmail.com"><img class="scaleable-img" alt="gmail" src="img/gmail.png"></a>
+            <a href="http://www.linkedin.com/in/kylepaulsen"><img class="scaleable-img" alt="linkedIn" src="img/linkedin.png"></a>
+            <a href="https://plus.google.com/u/0/114927046057873314726"><img class="scaleable-img" alt="google+" src="img/googlep.png"></a>
+            <a href="https://picasaweb.google.com/114927046057873314726"><img class="scaleable-img" alt="picassa" src="img/picassa.png"></a>
+          </div>-->
+          <div style="margin-top: 10px;">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  
+  {{ content }}
+</body>
+</html>
