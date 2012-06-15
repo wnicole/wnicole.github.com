@@ -13,6 +13,21 @@
   <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   
+  {% if page.url == "/index.html" %}
+    <script type="text/javascript" src="js/slides.min.jquery.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $("#slides").slides({
+          preload: true,
+          preloadImage: 'img/loading.gif',
+          play: 4000,
+          pause: 2500,
+          hoverPause: true
+        });
+      });
+    </script>
+  {% endif %}
+  
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
 <body>
