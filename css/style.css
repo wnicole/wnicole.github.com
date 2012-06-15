@@ -22,6 +22,16 @@ a:hover {
   color: rgb(126, 194, 235);
 }
 
+.project-row-left {
+  float: left;
+  width: 218px;
+  margin-bottom: 20px;
+}
+
+.project-row-item {
+  margin-left: 20px;
+}
+
 .main-nav a:link {
   text-decoration: none;
   color: rgb(87, 34, 13);
