@@ -22,16 +22,6 @@ a:hover {
   color: rgb(126, 194, 235);
 }
 
-.project-row-left {
-  float: left;
-  width: 218px;
-  margin-bottom: 20px;
-}
-
-.project-row-item {
-  margin-left: 20px;
-}
-
 .main-nav a:link {
   text-decoration: none;
   color: rgb(87, 34, 13);
@@ -66,27 +56,28 @@ a:hover {
   color: rgb(0,173,238);
 }
 
-.networking-links {
-  margin-top: 20px;
-  margin-right: 20px;
+
+.project-description {
+  color: rgb(87, 34, 13);
 }
 
-.networking-links a {
-  border: 0;
-  margin-left: 16px;
+.project-description ul {
+  margin: 0;
+  padding: 0;
 }
 
-.small-networking-links {
-  display: inline;
-  margin-left: 14px;
+.project-title {
+  color: rgb(172, 217, 245);
 }
 
-.small-networking-links img{
-  width: 24px;
+.project-row-left {
+  float: left;
+  width: 218px;
+  margin-bottom: 20px;
 }
 
-.project-list {
-  margin-top: 20px;
+.project-row-item {
+  margin-left: 20px;
 }
 
 .pull-left {
