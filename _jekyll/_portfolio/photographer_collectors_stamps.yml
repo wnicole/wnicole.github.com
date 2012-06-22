@@ -1,0 +1,19 @@
+name: Famous Photographer Collectors Stamps
+description: Four of the most famous and influential photographers were chosen to be the subject in a set of stamps. These stamps are targeted toward those with a love for photography and its history.
+deliverables: [Four photographer stamp sets]
+img_dir: stamps
+images: 
+  - src: stamps1.jpg
+    desc:  
+  - src: stamps7.jpg
+    desc:  
+  - src: stamps3.jpg
+    desc:  
+  - src: stamps4.jpg
+    desc:  
+  - src: stamps6.jpg
+    desc:  
+  - src: stamps2.jpg
+    desc:  
+thumbnail: stamps5.jpg
+order: 5

@@ -1,0 +1,51 @@
+---
+layout: main
+description: Nicole Worthington's webpage.
+---
+
+<div style="text-align: center; margin-bottom: 20px; color: rgb(87, 34, 13);">
+  Hello, My name is Nicole Worthington and I am a <b><i>Graphic Designer</i></b> living in Portland, Oregon!
+</div>
+
+<div id="slides">
+  <div class="slides_container very_round_corners" style="height: 360px;">
+    <a href="portfolio/belles_bakery_packaging">
+      <img src="img/slider/bakerylabel.jpg">
+    </a>
+    <a href="portfolio/fifth_degree_brewery_beer_bottles">
+      <img src="img/slider/beerlabels.jpg">
+    </a>
+    <a href="portfolio/laos_tourism_branding" >
+      <img src="img/slider/laosboxes.jpg">
+    </a>
+    <a href="portfolio/photographer_collectors_stamps">
+      <img src="img/slider/stamps.jpg">
+    </a>
+  </div>
+</div>
+
+<div style="height: 1px; border-top: 1px solid rgb(172, 217, 245); text-align: center; margin-top: 80px;">
+  <div style="display: inline-block; position: relative; top: -.7em; background-color: rgb(248, 248, 248); text-align: center; width: 200px;">
+    View My Latest Projects
+  </div>
+</div>
+
+<div style="margin-top: 30px;">
+
+{% for project in site.portfolio limit:4 %}
+
+{% if forloop.first %}
+<div style="width: 218px;" class="pull-left">
+{% else %}
+<div style="width: 218px; margin-left: 20px;" class="pull-left">
+{% endif %}
+  <a href="{{project.mdl_url}}">
+    <img alt="{{project.name}}" src="img/{{project.img_dir}}/{{project.thumbnail}}">
+  </a>
+  <div style="font-weight: bold; margin-bottom: 4px;">
+    <a href="{{project.mdl_url}}">{{project.name}}</a>
+  </div>
+  <a href="{{project.mdl_url}}"><i>View Full Project</i></a>
+</div>
+
+{% endfor %}

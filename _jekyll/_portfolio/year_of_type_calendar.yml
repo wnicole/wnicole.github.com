@@ -1,0 +1,35 @@
+name: “A Year of Type” Typographic Calendar
+description: This calendar is aimed at designers and lovers of good type. It allows the viewer to fully absorb and appreciate 12 classic typefaces in such a way that they will be excited to use them again and again in their designs.
+deliverables: [One 12-month calendar]
+img_dir: calendar
+images: 
+  - src: calendar13.jpg
+    desc:  
+  - src: calendar1.jpg
+    desc:  
+  - src: calendar2.jpg
+    desc:  
+  - src: calendar3.jpg
+    desc:  
+  - src: calendar5.jpg
+    desc:  
+  - src: calendar4.jpg
+    desc:  
+  - src: calendar6.jpg
+    desc:  
+  - src: calendar9.jpg
+    desc:  
+  - src: calendar7.jpg
+    desc:  
+  - src: calendar8.jpg
+    desc:  
+  - src: calendar10.jpg
+    desc:  
+  - src: calendar11.jpg
+    desc:  
+  - src: calendar12.jpg
+    desc:  
+  - src: calendar14.jpg
+    desc:  
+thumbnail: calendar13.jpg
+order: 1

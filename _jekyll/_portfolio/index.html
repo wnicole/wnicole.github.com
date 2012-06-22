@@ -1,0 +1,31 @@
+---
+layout: main
+title: Portfolio
+description: Nicole Worthington's webpage.
+base: ../
+---
+
+<h1>PORTFOLIO</h1>
+
+{% for project in site.portfolio %}
+
+{% capture not_first %}
+{% cycle 0, 1, 1, 1 %}
+{% endcapture %}
+
+{% if not_first contains "1" %}
+<div class="project-row-left project-row-item">
+{% else %}
+<div style="clear: both;"></div>
+<div class="project-row-left">
+{% endif %}
+  <a href="{{project.mdl_url}}">
+    <img alt="{{project.name}}" src="../img/{{project.img_dir}}/{{project.thumbnail}}">
+  </a>
+  <div style="font-weight: bold; margin-bottom: 4px;">
+    <a href="{{project.mdl_url}}">{{project.name}}</a>
+  </div>
+  <a href="{{project.mdl_url}}"><i>View Full Project</i></a>
+</div>
+
+{% endfor %}

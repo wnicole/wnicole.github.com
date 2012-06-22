@@ -1,0 +1,15 @@
+name: Coffee Cup Infographic
+description: Portlanders are big into two things&#58; coffee and being environmentally friendly. This infographic is designed to encourage those who have not yet switched to using reusable cups into doing so by educating them on the annual facts and figures of paper coffee cups.
+deliverables: [Infographic poster, Two mug size design]
+img_dir: coffee
+images: 
+  - src: coffee1.jpg
+    desc:  
+  - src: coffee2.jpg
+    desc:  
+  - src: coffee4.jpg
+    desc:  
+  - src: coffee3.jpg
+    desc:  
+thumbnail: coffee1.jpg
+order: 2
