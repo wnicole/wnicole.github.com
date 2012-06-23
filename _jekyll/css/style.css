@@ -5,6 +5,13 @@ body {
   color: rgb(172, 217, 245);
 }
 
+h3 {
+  color: rgb(87, 34, 13);
+  font-size: 1em;
+  font-weight: normal;
+  margin: 8px 0;
+}
+
 a:link {
   text-decoration: none;
   color: rgb(172, 217, 245);
@@ -48,17 +55,6 @@ a:hover {
 .active a {
   color: #ffffff !important;
 }
-
-.site-title {
-  color: rgb(0,151,217);
-  font-family: Courier New, Courier;
-  margin-top: 22px;
-}
-
-.site-title h1, h3 {
-  color: rgb(0,173,238);
-}
-
 
 .project-description {
   color: rgb(87, 34, 13);
