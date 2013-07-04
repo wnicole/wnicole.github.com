@@ -1,134 +1,406 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;vertical-align:baseline;font:inherit;font-size:100%;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}body{line-height:1;}ol,ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}table{border-spacing:0;border-collapse:collapse;}
+
+
+
+
+/* General Styles */
+
 body {
-  margin: 0;
-  font-family: 'Ubuntu', sans-serif;
-  background-color: rgb(248, 248, 248);
-  color: rgb(172, 217, 245);
+	background-image: url(../img/portfolioBG.png);
 }
 
-h3 {
-  color: rgb(87, 34, 13);
-  font-size: 1em;
-  font-weight: normal;
-  margin: 8px 0;
+.container {
+	margin-top: 60px;
+	margin-bottom: 60px;
+	padding: 0 120px;
+	max-width: 960px;
+	background-color: white;
+	box-shadow: 0px 0px 18px rgba(0,0,0,0.25);
 }
 
-a:link {
-  text-decoration: none;
-  color: rgb(172, 217, 245);
+header {
+	margin: 40px 0 80px;
 }
 
-a:visited {
-  text-decoration: none;
-  color: rgb(172, 217, 245);
+h2 {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom: #BD1A8D 1px solid;
+	color: black;
+	font-weight: 400;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	line-height: 24px;
 }
 
-a:active {
-  text-decoration: none;
-  color: rgb(172, 217, 245);
+p {
+	margin-bottom: 20px;
+	color: black;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: 'Lora', serif;
+	line-height: 20px;
+}
+
+h4 {
+	margin-bottom: 5px;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: 'Lora', serif;
+}
+
+a {
+	color: black;
+	text-decoration: none;
 }
 
 a:hover {
-  text-decoration: none;
-  color: rgb(126, 194, 235);
+	color: #BD1A8D;
+	text-decoration: none;
 }
 
-.main-nav a:link {
-  text-decoration: none;
-  color: rgb(87, 34, 13);
+.logo {
+	position: relative;
+	display: inline-block;
+	margin-left: -140px;
 }
 
-.main-nav a:visited {
-  text-decoration: none;
-  color: rgb(87, 34, 13);
+
+nav {
+	float:right;
+	margin-top: 25px;
 }
 
-.main-nav a:active {
-  text-decoration: none;
-  color: rgb(87, 34, 13);
+nav li{
+	display: inline;
+	margin-left: 30px;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	cursor: pointer;
 }
 
-.main-nav a:hover {
-  text-decoration: none;
-  color: rgb(87, 34, 13);
+.activeli a{
+	color: #BD1A8D;
 }
 
-.active a {
-  color: #ffffff !important;
+.Projects {
+	margin-bottom: 100px;
 }
 
-.project-description {
-  color: rgb(87, 34, 13);
+.saturated {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	opacity: 0;
+	transition: opacity .2s;
 }
 
-.project-description ul {
-  margin: 0;
-  padding: 0;
+.item {
+	position: relative;
+	margin-bottom: 25px;
 }
 
-.project-title {
-  color: rgb(172, 217, 245);
+.item:hover .title{
+	width: 250px;
 }
 
-.project-row-left {
-  float: left;
-  width: 218px;
-  margin-bottom: 20px;
+.item:hover .saturated {
+	opacity: 100;
 }
 
-.project-row-item {
-  margin-left: 20px;
+.item h3 {
+	margin: 12px 0 5px 20px;
+	color: #BD1A8D;
+	font-weight: 400;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
 }
 
-.pull-left {
-  float: left;
+.item p {
+	margin-left: 20px;
+	color: black;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 16px;
+	font-family: 'Lora', serif;
 }
 
-.round_corners {
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
+.title {
+	position: absolute;
+	bottom: 20px;
+	z-index: 100;
+	display: block;
+	overflow: hidden;
+	width: 0;
+	height: 65px;
+	background-color: white;
+	white-space: nowrap;
+	transition: width .2s;
 }
 
-.very_round_corners {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -khtml-border-radius: 10px;
-  border-radius: 10px;
+#sticker li {
+	margin-bottom:5px;
+	color: black;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: 'Lora', serif;
+	line-height: 20px;
 }
 
-/* slider stuff */
-
-/* Pagination */
-
-.pagination {
-        margin:16px auto 0;
-        width:100px;
+.images {
+	float: right;
+	max-width: 100%;
 }
 
-.pagination li {
-        float:left;
-        margin:0 1px;
-        list-style:none;
+.images img{
+	margin-bottom: 20px;
 }
 
-.pagination li a {
-        display:block;
-        width:12px;
-        height:0;
-        padding-top:12px;
-        background-image:url(../img/pagination.png);
-        background-position:0 0;
-        float:left;
-        overflow:hidden;
+#sticker {
+	max-width: 222px;
 }
 
-.pagination li.current a {
-        background-position:0 -12px;
+.project {
+	margin-bottom: 80px;
 }
 
-.slides_container a {
-        width:940px;
-        height:360px;
-        display:block;
+.projnav a{
+	margin-top: 20px;
+	color: #BD1A8D;
+	font-weight: 300;
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+}
+
+.prev {
+	float: left;
+}
+
+.next {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+/* Home Page Styles */
+
+.greeting {
+	margin-bottom: 120px;
+}
+
+.greeting h1 {
+	margin-bottom:20px;
+	padding-bottom: 20px;
+	border-bottom: #BD1A8D 1px solid;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Lora', serif;
+}
+
+.greeting p {
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	line-height: 32px;
+}
+
+
+/* Contact Page Styles */
+
+.formCat {
+	margin: 10px 0;
+	padding: 6px 0 0 10px;
+	background-color: #BD1A8D;
+	color: white;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+.connect {
+	float: right;
+	text-align: center;
+}
+
+.mainFont {
+	font-weight: 300;
+	font-family: 'Lato', sans-serif;
+}
+
+#formTable {
+	color: #BD1A8D;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+#formTable input {
+	width: 100%;
+	color: black;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+	
+}
+
+#formTable textarea {
+	width: 100%;
+	color: black;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Lato', sans-serif;
+}
+
+#sendEmailBtn {
+	width: auto !important;
+}
+
+.contactIcons {
+	margin: 20px 0;
+	width: 100%;
+	font-size: 50px;
+}
+
+.contactIcons a {
+	color: #c1c1c1;
+}
+
+.contactIcons a:hover {
+	transition: color .2s;
+	color: #BD1A8D;
+	text-decoration: none;
+}
+
+#emailForm table {
+	width: 98%;
+}
+
+#emailForm button {
+	float: right;
+}
+
+.textareatd {
+	padding-top: 10px;
+	vertical-align: top;
+}
+
+.purple {
+	position: absolute;
+	z-index: 50;
+}
+
+
+/* Responsive Page Styles */
+
+@media screen and (max-width:767px){
+	.container {
+		margin: 10px;
+		padding: 0 20px;
+		max-width: 100%;
+	}
+	header {
+		margin: 20px 0 20px;
+	}
+	.logo {
+		margin-left: -90px;
+	}
+	.greeting {
+		margin-bottom: 40px;
+	}
+	.greeting p{
+		font-size: 19px;
+		line-height: 26px;
+	}
+	.Projects {
+		margin-bottom: 10px;
+	}
+	.project {
+		margin-bottom: 0px;
+	}
+	.images {
+		margin-bottom: 10px;
+	}
+	.images img {
+		margin-bottom: 10px;
+	}
+	.saturated {
+		opacity: 100;
+	}
+	.title {
+		width: 240px;
+	}
+	nav {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		margin-top: 20px;
+		border-bottom: #BD1A8D 1px solid;
+		text-align: center;
+	}
+	nav ul {
+		margin-bottom: 30px;
+	}
+	nav li {
+		margin:0 3%;
+	}
+	#sticker {
+		margin-top: -10px;
+		margin-bottom: 40px;
+		max-width: 100%;
+	}
+	#emailForm table {
+		width: 95%;
+	}
+	.contactIcons {
+		display: inline;
+		width: auto;
+	}
+	.form {
+		margin-top: -10px;
+	}
+	.form h2 {
+		text-align: center;
+	}
+	.connect {
+		margin: 30px 0;
+	}
+}
+
+
+
+
+
+
+/* Common Classes */
+
+.clearfix:before, .clearfix:after { 
+    display: table;
+    content: " ";
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+.clear {
+	clear: both;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }
