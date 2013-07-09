@@ -81,6 +81,20 @@ nav li{
 	cursor: pointer;
 }
 
+button {
+	background-color: #c1c1c1;
+	font-family: Lato;
+	font-size: 16px;
+	color: white;
+	border: 0;
+	padding: 5px 20px;
+	transition: background-color .2s;
+}
+
+button:hover {
+	background-color: #BD1A8D
+}
+
 .activeli a{
 	color: #BD1A8D;
 }
@@ -297,6 +311,37 @@ nav li{
 .purple {
 	position: absolute;
 	z-index: 50;
+}
+
+#myModal {
+	width: 430px;
+	margin-left: -205px;
+}
+
+.modal-footer {
+	display: none;
+}
+
+.modal-header {
+	border-bottom: 1px solid #BD1A8D;
+	font-family: Lora;
+	font-size: 35px;
+	text-align: center;
+	padding: 30px;
+}
+
+.modal-header button{
+	display: none;
+}
+
+.modal-body p{
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: 'Lato', sans-serif;
+	line-height: 32px;
+	margin: 0;
+	padding: 10px 0 18px;
 }
 
 

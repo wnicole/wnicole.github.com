@@ -77,7 +77,7 @@ $(function() {
 				// hide the form and show the thank you message.
 				var emailForm = $("#emailForm");
 				// actually send the email.
-				//emailForm.submit();
+				emailForm.submit();
 				
 				// reset the form
 				name.val("");
@@ -87,6 +87,11 @@ $(function() {
 				
 				// show the email sent modal.
 				$("#myModal").modal();
+				
+				// close the modal after 2 seconds.
+				setTimeout(function(){
+					$("#myModal .modal-header button").click();
+				}, 3000);
 			}
 		});
 	}
