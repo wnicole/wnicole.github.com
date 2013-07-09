@@ -264,7 +264,7 @@ button:hover {
 	font-weight: 300;
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
-	
+
 }
 
 #formTable textarea {
@@ -277,6 +277,13 @@ button:hover {
 
 #sendEmailBtn {
 	width: auto !important;
+}
+
+#formError {
+	color: #f00;
+	font-family: Lato;
+	margin-bottom: 10px;
+	display: none;
 }
 
 .contactIcons {
@@ -428,7 +435,7 @@ button:hover {
 
 /* Common Classes */
 
-.clearfix:before, .clearfix:after { 
+.clearfix:before, .clearfix:after {
     display: table;
     content: " ";
 }
