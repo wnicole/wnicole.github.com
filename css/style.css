@@ -67,6 +67,10 @@ a:hover {
 	width: 500px;
 }
 
+.logo img {
+  width:500px;
+}
+
 
 nav {
 	float:right;
