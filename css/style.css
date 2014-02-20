@@ -370,6 +370,7 @@ button:hover {
 	}
 	.logo {
 		margin-left: -90px;
+		width: 128%;
 	}
 	.greeting {
 		margin-bottom: 40px;
@@ -431,7 +432,11 @@ button:hover {
 	.connect {
 		margin: 30px 0;
 	}
+
 }
+
+
+
 
 
 
