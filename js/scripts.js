@@ -36,7 +36,7 @@ $(function() {
 	
 	
 	
-	if (stickerEle) {
+	if (stickerEle.length > 0) {
 	  handleSticky();
     $(window).resize(debounce(handleSticky, 50));
   }
