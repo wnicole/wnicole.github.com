@@ -6,13 +6,37 @@ $(function() {
     	return re.test(email);
 	}
 
+  function debounce(fn, time) {
+    var lastTimeout;
+    return function() {
+      if (lastTimeout) {
+        clearTimeout(lastTimeout);
+      }
+      lastTimeout = setTimeout(fn, time);
+    };
+  }
 
-	var ele = $("#sticker");
-	var screenWidth = $(document).width();
-	if (ele.length > 0 && screenWidth > 767) {
-		// if we found the element and the screen is wide enough
-		ele.sticky({topSpacing: 60});
-	}
+	var stickerEle = $("#sticker");
+	
+	var isSticky = false;
+	var handleSticky = function() {
+    if ($(document).width() > 767) {
+      if (!isSticky) {
+        stickerEle.sticky({topSpacing: 60, bottomSpacing: 200});
+        stickerEle.updateStick();
+        isSticky = true;
+      }
+      stickerEle.css("max-width", 0.2292817679558011 * stickerEle.closest(".content").width() + "px");
+    } else {
+      stickerEle.unstick();
+      isSticky = false;
+      stickerEle.css("max-width", "100%");
+    }
+	};
+	
+	handleSticky();
+	
+	$(window).resize(debounce(handleSticky, 50));
 
 	ele = $("#sendEmailBtn");
 	if (ele.length > 0) {

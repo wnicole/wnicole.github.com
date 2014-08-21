@@ -20,13 +20,13 @@ body {
 }
 
 header {
-	margin: 40px 0 80px;
+	margin: 60px 0 80px;
 }
 
 h2 {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	border-bottom: #BD1A8D 1px solid;
+	border-bottom: #550085 1px solid;
 	color: black;
 	font-weight: 400;
 	font-size: 18px;
@@ -56,21 +56,20 @@ a {
 }
 
 a:hover {
-	color: #BD1A8D;
+	color: #550085;
 	text-decoration: none;
 }
 
 .logo {
 	position: relative;
 	display: inline-block;
-	margin-left: -140px;
-	width: 500px;
+	width: 350px;
+	margin-top: 15px;
 }
 
 .logo img {
-  width:500px;
+  width:350px;
 }
-
 
 nav {
 	float:right;
@@ -97,11 +96,11 @@ button {
 }
 
 button:hover {
-	background-color: #BD1A8D
+	background-color: #550085
 }
 
 .activeli a{
-	color: #BD1A8D;
+	color: #550085;
 }
 
 .Projects {
@@ -132,7 +131,7 @@ button:hover {
 
 .item h3 {
 	margin: 12px 0 5px 20px;
-	color: #BD1A8D;
+	color: #550085;
 	font-weight: 400;
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
@@ -172,6 +171,7 @@ button:hover {
 .images {
 	float: right;
 	max-width: 100%;
+	padding-left: 10px;
 }
 
 .images img{
@@ -188,7 +188,7 @@ button:hover {
 
 .projnav a{
 	margin-top: 20px;
-	color: #BD1A8D;
+	color: #550085;
 	font-weight: 300;
 	font-size: 14px;
 	font-family: 'Lato', sans-serif;
@@ -219,7 +219,7 @@ button:hover {
 .greeting h1 {
 	margin-bottom:20px;
 	padding-bottom: 20px;
-	border-bottom: #BD1A8D 1px solid;
+	border-bottom: #550085 1px solid;
 	text-align: center;
 	font-size: 50px;
 	font-family: 'Lora', serif;
@@ -239,7 +239,7 @@ button:hover {
 .formCat {
 	margin: 10px 0;
 	padding: 6px 0 0 10px;
-	background-color: #BD1A8D;
+	background-color: #550085;
 	color: white;
 	font-weight: 300;
 	font-size: 16px;
@@ -251,13 +251,18 @@ button:hover {
 	text-align: center;
 }
 
+.IconsSet {
+  padding: 0 25px;
+  text-align: center;
+}
+
 .mainFont {
 	font-weight: 300;
 	font-family: 'Lato', sans-serif;
 }
 
 #formTable {
-	color: #BD1A8D;
+	color: #550085;
 	font-weight: 300;
 	font-size: 16px;
 	font-family: 'Lato', sans-serif;
@@ -293,8 +298,10 @@ button:hover {
 
 .contactIcons {
 	margin: 20px 0;
-	width: 100%;
+	width: 50%;
 	font-size: 50px;
+	float: left;
+	text-align: center;
 }
 
 .contactIcons a {
@@ -303,7 +310,7 @@ button:hover {
 
 .contactIcons a:hover {
 	transition: color .2s;
-	color: #BD1A8D;
+	color: #550085;
 	text-decoration: none;
 }
 
@@ -335,7 +342,7 @@ button:hover {
 }
 
 .modal-header {
-	border-bottom: 1px solid #BD1A8D;
+	border-bottom: 1px solid #550085;
 	font-family: Lora;
 	font-size: 35px;
 	text-align: center;
@@ -358,19 +365,38 @@ button:hover {
 
 
 /* Responsive Page Styles */
+/* Responsive Page Styles */
+@media screen and (max-width:1200px){
+	.container {
+		max-width: 820px;
+	}
+}
 
-@media screen and (max-width:767px){
+@media screen and (max-width:1080px){
+	.container {
+		max-width: 100%;
+		width: auto;
+		padding: 0 60px;
+	}
+}
+
+/*
+@media screen and (max-width:860px){
+	.container {
+		max-width: 400px;
+	}
+}
+*/
+
+
+@media screen and (max-width:900px){
 	.container {
 		margin: 10px;
 		padding: 0 20px;
 		max-width: 100%;
 	}
 	header {
-		margin: 20px 0 20px;
-	}
-	.logo {
-		margin-left: -90px;
-		width: 128%;
+		margin: 20px 0 60px;
 	}
 	.greeting {
 		margin-bottom: 40px;
@@ -397,20 +423,6 @@ button:hover {
 	.title {
 		width: 240px;
 	}
-	nav {
-		display: block;
-		float: none;
-		margin: 0 auto;
-		margin-top: 20px;
-		border-bottom: #BD1A8D 1px solid;
-		text-align: center;
-	}
-	nav ul {
-		margin-bottom: 30px;
-	}
-	nav li {
-		margin:0 3%;
-	}
 	#sticker {
 		margin-top: -10px;
 		margin-bottom: 40px;
@@ -421,25 +433,68 @@ button:hover {
 	}
 	.contactIcons {
 		display: inline;
-		width: auto;
-	}
-	.form {
-		margin-top: -10px;
-	}
-	.form h2 {
+		float: none;
 		text-align: center;
 	}
-	.connect {
+	.project .form {
+		margin-top: -10px;
+		width: 100%;
+	}
+	.project .form h2 {
+		text-align: center;
+	}
+	.project .connect {
 		margin: 30px 0;
+		width: 100%;
+	}
+	
+	.icon {
+  	padding: 10px;
 	}
 
 }
 
+@media screen and (max-width:780px) {
+  header {
+		margin: 20px 0 20px;
+	}
+  nav {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		margin-top: 20px;
+		border-bottom: #550085 1px solid;
+		text-align: center;
+	}
+	nav ul {
+		margin-bottom: 30px;
+	}
+	nav li {
+		margin:0 3%;
+	}
+}
+
+@media screen and (max-width:550px){
+  .icon {
+    font-size: 35px;
+    padding: 5px;
+  }
+  
+}
 
 
 
+/*
+input[type=text], textarea {
+  outline: none;
+}
+*/
 
-
+body #formTable input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 5px #550085;
+  border-color: transparent;
+  outline: none;
+}
 
 
 
