@@ -34,9 +34,12 @@ $(function() {
     }
 	};
 	
-	handleSticky();
 	
-	$(window).resize(debounce(handleSticky, 50));
+	
+	if (stickerEle) {
+	  handleSticky();
+    $(window).resize(debounce(handleSticky, 50));
+  }
 
 	ele = $("#sendEmailBtn");
 	if (ele.length > 0) {
