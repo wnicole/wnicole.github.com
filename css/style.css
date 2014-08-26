@@ -24,11 +24,11 @@ header {
 }
 
 h2 {
-  color: black;
-  font-weight: 400;
-  font-size: 18px;
-  font-family: 'Lato', sans-serif;
-  line-height: 24px;
+	color: black;
+	font-weight: 400;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	line-height: 24px;
 }
 
 h3 {
@@ -63,8 +63,8 @@ h5 {
 	font-style: italic;
 	line-height: 22px;
 	margin-bottom: 10px;
-  padding-bottom: 10px;
-  border-bottom: #550085 1px solid;
+	padding-bottom: 10px;
+	border-bottom: #550085 1px solid;
 }
 
 a {
@@ -86,7 +86,7 @@ a:hover {
 }
 
 .logo img {
-  width:350px;
+	width:350px;
 }
 
 nav {
@@ -125,26 +125,43 @@ button:hover {
 	margin-bottom: 100px;
 }
 
-.saturated {
+.desaturated {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 50;
-	opacity: 0;
+	opacity: 1;
 	transition: opacity .2s;
+}
+
+.item .coverHide {
+	opacity: 0;
 }
 
 .item {
 	position: relative;
 	margin-bottom: 25px;
+
+	/* span4 bootstrap crap */
+	display: block;
+	float: left;
+	box-sizing: border-box;
+	margin-left: 2.7624309392265194%;
+	margin-bottom: 25px;
+	width: 31.491712707182323%;
+	*width: 31.43852121782062%;
 }
 
-.item:hover .title{
+.item:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+.item:hover .title {
 	width: 250px;
 }
 
-.item:hover .saturated {
-	opacity: 100;
+.item:hover .desaturated {
+	opacity: 0;
 }
 
 .item h3 {
@@ -270,8 +287,8 @@ button:hover {
 }
 
 .IconsSet {
-  padding: 0 25px;
-  text-align: center;
+	padding: 0 25px;
+	text-align: center;
 }
 
 .mainFont {
@@ -398,15 +415,6 @@ button:hover {
 	}
 }
 
-/*
-@media screen and (max-width:860px){
-	.container {
-		max-width: 400px;
-	}
-}
-*/
-
-
 @media screen and (max-width:900px){
 	.container {
 		margin: 10px;
@@ -435,11 +443,8 @@ button:hover {
 	.images img {
 		margin-bottom: 10px;
 	}
-	.saturated {
-		opacity: 100;
-	}
-	.title {
-		width: 240px;
+	.item:hover .title {
+		width: 220px;
 	}
 	#sticker {
 		margin-top: -10px;
@@ -467,16 +472,16 @@ button:hover {
 	}
 
 	.icon {
-  	padding: 10px;
+		padding: 10px;
 	}
 
 }
 
 @media screen and (max-width:780px) {
-  header {
+	header {
 		margin: 20px 0 20px;
 	}
-  nav {
+	nav {
 		display: block;
 		float: none;
 		margin: 0 auto;
@@ -490,39 +495,63 @@ button:hover {
 	nav li {
 		margin:0 3%;
 	}
+	.desaturated {
+		opacity: 0;
+	}
+	.title {
+		width: 240px;
+	}
+	.item:hover .title {
+		width: 240px;
+	}
+	.item {
+		margin-left: 2.7624309392265194%;
+		width: 48.61878453038674%;
+		*width: 48.56559304102504%;
+	}
+	.item:nth-child(3n+1) {
+		margin-left: 2.7624309392265194%;
+	}
+	.item:nth-child(2n+1) {
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width:580px){
-  .icon {
-    font-size: 35px;
-    padding: 5px;
-  }
+	.icon {
+		font-size: 35px;
+		padding: 5px;
+	}
+	.item {
+		width: 100%;
+		margin-left: 0;
+	}
 }
 
 @media screen and (max-width:420px){
-  .icon {
-    font-size: 20px;
-    padding: 5px;
-  }
+	.icon {
+		font-size: 20px;
+		padding: 5px;
+	}
 }
 
 @media screen and (max-width:330px){
-  .icon {
-    font-size: 10px;
-    padding: 5px;
-  }
+	.icon {
+		font-size: 10px;
+		padding: 5px;
+	}
 }
 
 /*
 input[type=text], textarea {
-  outline: none;
+	outline: none;
 }
 */
 
 body #formTable input[type=text]:focus, textarea:focus {
-  box-shadow: 0 0 5px #550085;
-  border-color: transparent;
-  outline: none;
+	box-shadow: 0 0 5px #550085;
+	border-color: transparent;
+	outline: none;
 }
 
 
@@ -530,11 +559,11 @@ body #formTable input[type=text]:focus, textarea:focus {
 /* Common Classes */
 
 .clearfix:before, .clearfix:after {
-    display: table;
-    content: " ";
+	display: table;
+	content: " ";
 }
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 
 

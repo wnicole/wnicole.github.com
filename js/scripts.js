@@ -2,44 +2,115 @@ $(function() {
 
 	// util functions
 	function validateEmail(email) {
-    	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    	return re.test(email);
+		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
 	}
 
-  function debounce(fn, time) {
-    var lastTimeout;
-    return function() {
-      if (lastTimeout) {
-        clearTimeout(lastTimeout);
-      }
-      lastTimeout = setTimeout(fn, time);
-    };
-  }
+	function desaturate(img, amount, w, h) {
+		var canvas = document.createElement("canvas");
+		var width = w || img.width;
+		var height = h || img.height;
+		canvas.width = width;
+		canvas.height = height;
+
+		var ctx = canvas.getContext("2d");
+		ctx.drawImage(img, 0, 0);
+
+		// pixelData becomes a huge array holding Uint8's.
+		// There are 4 Uint8's per pixel (rgba) and all values are [0 - 255]
+		var imageData = ctx.getImageData(0, 0, width, height);
+		var pixelData = imageData.data;
+
+		var idx;
+
+		var getPixelIdx = function(x, y) {
+			return (y * width + x) * 4;
+		};
+
+		for (var y = 0; y < height; y++) {
+			for (var x = 0; x < width; x++) {
+				idx = getPixelIdx(x, y);
+				var r = pixelData[idx];
+				var g = pixelData[idx + 1];
+				var b = pixelData[idx + 2];
+
+				var max = Math.max(r, g, b);
+				var min = Math.max(r, g, b);
+				var mid = (max + min) / 2;
+
+				r += (mid - r) * amount;
+				g += (mid - g) * amount;
+				b += (mid - b) * amount;
+
+				pixelData[idx] = r;
+				pixelData[idx + 1] = g;
+				pixelData[idx + 2] = b;
+			}
+		}
+
+		ctx.putImageData(imageData, 0, 0);
+
+		var newImg = new Image();
+		newImg.className = "desaturated coverHide";
+		newImg.src = canvas.toDataURL();
+		return newImg;
+	}
+
+	$(window).load(function() {
+		var $coverImages = $(".coverImage");
+
+		var processImage = function(idx) {
+			var $curImage = $coverImages.eq(idx);
+			if ($curImage.length > 0) {
+				var $newImg = $(desaturate($curImage[0], 0.85, 500, 333));
+				$newImg.insertBefore($curImage);
+				// query the clientWidth to force the render so we can
+				// re-render and cause the animation.
+				$newImg[0].clientWidth;
+				$newImg.removeClass("coverHide");
+
+				setTimeout(function() {
+					processImage(idx + 1);
+				}, 20);
+			}
+		};
+
+		processImage(0);
+	});
+
+	function debounce(fn, time) {
+		var lastTimeout;
+		return function() {
+			if (lastTimeout) {
+				clearTimeout(lastTimeout);
+			}
+			lastTimeout = setTimeout(fn, time);
+		};
+	}
 
 	var stickerEle = $("#sticker");
-	
+
 	var isSticky = false;
 	var handleSticky = function() {
-    if ($(document).width() > 767) {
-      if (!isSticky) {
-        stickerEle.sticky({topSpacing: 60, bottomSpacing: 200});
-        stickerEle.updateStick();
-        isSticky = true;
-      }
-      stickerEle.css("max-width", 0.2292817679558011 * stickerEle.closest(".content").width() + "px");
-    } else {
-      stickerEle.unstick();
-      isSticky = false;
-      stickerEle.css("max-width", "100%");
-    }
+		if ($(document).width() > 767) {
+			if (!isSticky) {
+				stickerEle.sticky({topSpacing: 60, bottomSpacing: 200});
+				stickerEle.updateStick();
+				isSticky = true;
+			}
+
+			stickerEle.css("max-width", 0.2292817679558011 * stickerEle.closest(".content").width() + "px");
+		} else {
+			stickerEle.unstick();
+			isSticky = false;
+			stickerEle.css("max-width", "100%");
+		}
 	};
-	
-	
-	
+
 	if (stickerEle.length > 0) {
-	  handleSticky();
-    $(window).resize(debounce(handleSticky, 50));
-  }
+		handleSticky();
+		$(window).resize(debounce(handleSticky, 50));
+	}
 
 	ele = $("#sendEmailBtn");
 	if (ele.length > 0) {
