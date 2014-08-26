@@ -57,25 +57,27 @@ $(function() {
 	}
 
 	$(window).load(function() {
-		var $coverImages = $(".coverImage");
+		if ($(window).width() > 760 && document.body.style.webkitFilter === undefined) {
+			var $coverImages = $(".coverImage");
 
-		var processImage = function(idx) {
-			var $curImage = $coverImages.eq(idx);
-			if ($curImage.length > 0) {
-				var $newImg = $(desaturate($curImage[0], 0.85, 500, 333));
-				$newImg.insertBefore($curImage);
-				// query the clientWidth to force the render so we can
-				// re-render and cause the animation.
-				$newImg[0].clientWidth;
-				$newImg.removeClass("coverHide");
+			var processImage = function(idx) {
+				var $curImage = $coverImages.eq(idx);
+				if ($curImage.length > 0) {
+					var $newImg = $(desaturate($curImage[0], 0.85, 500, 333));
+					$newImg.insertBefore($curImage);
 
-				setTimeout(function() {
-					processImage(idx + 1);
-				}, 20);
-			}
-		};
+					setTimeout(function() {
+						$newImg.removeClass("coverHide");
+					}, 100);
 
-		processImage(0);
+					setTimeout(function() {
+						processImage(idx + 1);
+					}, 20);
+				}
+			};
+
+			processImage(0);
+		}
 	});
 
 	function debounce(fn, time) {

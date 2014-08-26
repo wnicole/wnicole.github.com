@@ -131,7 +131,9 @@ button:hover {
 	left: 0;
 	z-index: 50;
 	opacity: 1;
-	transition: opacity .2s;
+	transition: opacity .3s;
+	-webkit-backface-visibility: hidden;
+	transform: translate3d(0, 0, 1px);
 }
 
 .item .coverHide {
@@ -162,6 +164,16 @@ button:hover {
 
 .item:hover .desaturated {
 	opacity: 0;
+}
+
+.item .coverImage {
+	-webkit-filter: saturate(15%);
+	transition: -webkit-filter .3s;
+
+}
+
+.item:hover .coverImage {
+	-webkit-filter: saturate(100%);
 }
 
 .item h3 {
@@ -500,6 +512,9 @@ button:hover {
 	}
 	.title {
 		width: 240px;
+	}
+	.item .coverImage {
+		-webkit-filter: saturate(100%);
 	}
 	.item:hover .title {
 		width: 240px;
