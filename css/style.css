@@ -251,7 +251,11 @@ button:hover {
 
 
 
-
+.about h2 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: #550085 1px solid;
+}
 
 
 
