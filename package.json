@@ -1,0 +1,24 @@
+{
+  "name": "nicoles-portfolio-site",
+  "version": "1.0.0",
+  "description": "Nicole's portfolio website",
+  "main": "build.js",
+  "dependencies": {},
+  "devDependencies": {
+    "metalsmith": "^0.11.0",
+    "metalsmith-collections": "^0.6.0",
+    "metalsmith-templates": "git://github.com/kylepaulsen/metalsmith-templates.git",
+    "metalsmith-permalinks": "^0.4.0",
+    "find-remove": "^0.2.5",
+    "handlebars": "^2.0.0",
+    "metalsmith-beautify": "0.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node build.js dev",
+    "build": "node build.js",
+    "clean": "node build.js clean"
+  },
+  "author": "Kyle Paulsen",
+  "license": "MIT"
+}

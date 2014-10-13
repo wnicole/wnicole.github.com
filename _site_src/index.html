@@ -1,0 +1,24 @@
+---
+template: main.handlebars
+frontPage: true
+---
+<div class="content">
+    <div class="greeting">
+        <h1>Welcome, it's nice to meet you!</h1>
+        <p>My name is Nicole Worthington and I am a Graphic Designer in Portland, Oregon. I have a passion for great typography and cohesive branding. I love learning new design techniques and tricks. When I am not busy designing you can usually find me curled up with a great book and a hot mug of cocoa.</p>
+    </div>
+
+    <div class="Projects">
+        {{#each projects}}
+        <div class="item">
+            <a href="{{path}}">
+                <img class="coverImage" src="{{cover.path}}" alt="{{cover.alt}}">
+                <div class="title">
+                    <h3>{{title}}</h3>
+                    <p>{{subtitle}}</p>
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </div>
+</div>

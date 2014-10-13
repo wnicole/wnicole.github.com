@@ -1,0 +1,32 @@
+---
+template: main.handlebars
+---
+
+<div class="content">
+    <div class="project row-fluid">
+        <div class="span3">
+            <div id="sticker">
+                <h2>{{title}}</h2>
+                <h5>{{subtitle}}</h5>
+
+                {{{contents}}}
+
+                <div class="projnav">
+                    {{#if previous}}
+                    <a class="prev" href="../../{{previous.path}}">&lt; Previous</a>
+                    {{/if}}
+                    {{#if next}}
+                    <a class="next" href="../../{{next.path}}">Next &gt;</a>
+                    {{/if}}
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="images span9">
+            {{#each images}}
+                <img src="../../{{path}}" alt="{{../title}} - {{alt}}">
+            {{/each}}
+        </div>
+    </div>
+</div>
