@@ -12,7 +12,7 @@ body {
 
 .container {
 	margin-top: 60px;
-	margin-bottom: 60px;
+	margin-bottom: 120px;
 	padding: 0 120px;
 	max-width: 960px;
 	background-color: white;
@@ -269,7 +269,7 @@ button:hover {
 /* Home Page Styles */
 
 .greeting {
-	margin-bottom: 120px;
+	margin-bottom: 80px;
 }
 
 .greeting h1 {
@@ -287,6 +287,36 @@ button:hover {
 	font-size: 20px;
 	font-family: 'Lato', sans-serif;
 	line-height: 32px;
+}
+
+.Projects h4 {
+	text-align: center;
+    border-bottom: #550085 1px solid;
+    border-top: #550085 1px solid;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
+}
+
+.Projects h5 {
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 520px;
+    border-bottom: #550085 1px solid;
+    border-top: #550085 1px solid;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Lora', serif;
 }
 
 
