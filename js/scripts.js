@@ -1,11 +1,8 @@
 $(function() {
 	
 	// reCAPTCHA submit button disable
-	document.getElementById("sendEmailBtn").disabled = true;
-	
-	 function enableBtn(){
-    		document.getElementById("sendEmailBtn").disabled = false;
-   	}
+	//document.getElementById("sendEmailBtn").disabled = true; <--Need to figure out where to put this bit
+	 //function enableBtn(){document.getElementById("sendEmailBtn").disabled = false;}
 	
 	
 	// util functions
