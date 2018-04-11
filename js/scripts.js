@@ -1,10 +1,5 @@
 $(function() {
-	
-	// reCAPTCHA submit button disable
-	//document.getElementById("sendEmailBtn").disabled = true; <--Need to figure out where to put this bit
-	 //function enableBtn(){document.getElementById("sendEmailBtn").disabled = false;}
-	
-	
+
 	// util functions
 	function validateEmail(email) {
 		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -130,6 +125,7 @@ $(function() {
 			var subject = $("#subjectInput");
 			var message = $("#messageInput");
 			var errorEle = $("#formError");
+			var reCaptchaBox = $(".g-recaptcha iframe");
 			var invalidFields = [];
 			var valid = true;
 
@@ -138,7 +134,14 @@ $(function() {
 			email.css("background-color", "#fff");
 			subject.css("background-color", "#fff");
 			message.css("background-color", "#fff");
+			reCaptchaBox.css("border-left", "none");
 			errorEle.css("display", "none");
+
+			if (grecaptcha.getResponse() == ""){
+				  reCaptchaBox.css("border-left", "3px solid #faa");
+					invalidFields.push("reCaptcha");
+					valid = false;
+			}
 
 			if (name.val() === "") {
 				// the name is empty, do things to tell the user here
@@ -188,6 +191,7 @@ $(function() {
 				email.val("");
 				subject.val("Hi there!");
 				message.val("");
+				grecaptcha.reset();
 
 				// show the email sent modal.
 				$("#myModal").modal();
