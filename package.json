@@ -10,7 +10,7 @@
     "metalsmith-templates": "git://github.com/kylepaulsen/metalsmith-templates.git",
     "metalsmith-permalinks": "^0.4.0",
     "find-remove": "^0.2.5",
-    "handlebars": "^2.0.0",
+    "handlebars": ">=4.3.0",
     "metalsmith-beautify": "0.0.7"
   },
   "scripts": {
