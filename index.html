@@ -44,21 +44,17 @@
 
     <script>
       (function() {
-
       // store the slider in a local variable
       var $window = $(window),
           flexslider = { vars:{} };
-
       // tiny helper function to add breakpoints
       function getGridSize() {
         return (window.innerWidth < 600) ? 2 :
                (window.innerWidth < 900) ? 3 : 4;
       }
-
       $(function() {
         SyntaxHighlighter.all();
       });
-
       $window.load(function() {
         $('.flexslider').flexslider({
           animation: "slide",
@@ -68,11 +64,9 @@
           maxItems: getGridSize() // use function to pull in initial value
         });
       });
-
       // check grid size on resize event
       $window.resize(function() {
         var gridSize = getGridSize();
-
         flexslider.vars.minItems = gridSize;
         flexslider.vars.maxItems = gridSize;
       });
@@ -114,6 +108,24 @@
                 
 	            
 	                <div class="item">
+	                    <a href="projects/UberForBusiness">
+	                        <img class="coverImage" src="img/UberCafe_cover.jpg" alt="Uber Cafe Project">
+	                        <div class="title">
+	                            <h3>Uber Cafe</h3>
+	                            <p>Uber for Business</p>
+	                        </div>
+	                    </a>
+	                </div>
+	                <div class="item">
+	                    <a href="projects/Inspire19">
+	                        <img class="coverImage" src="img/Inspire19_cover.jpg" alt="Coupa Inspire 19 Project">
+	                        <div class="title">
+	                            <h3>Coupa Inspire '19</h3>
+	                            <p>Coupa</p>
+	                        </div>
+	                    </a>
+	                </div>
+	                <div class="item">
 	                    <a href="projects/NetscoutFlorence">
 	                        <img class="coverImage" src="img/NetscoutFlorence_cover.jpg" alt="Netscout Florence Project">
 	                        <div class="title">
@@ -140,7 +152,7 @@
 	                        </div>
 	                    </a>
 	                </div>
-	                <div class="item">
+	                <!--<div class="item">
 	                    <a href="projects/CoupaInspire">
 	                        <img class="coverImage" src="img/Inspire17_cover.jpg" alt="Coupa Inspire '17 Project">
 	                        <div class="title">
@@ -148,7 +160,7 @@
 	                            <p>Coupa</p>
 	                        </div>
 	                    </a>
-	                </div>
+	                </div>-->
 	                <div class="item">
 	                    <a href="projects/DellEMCWorld">
 	                        <img class="coverImage" src="img/DellEMCWorld17_cover.jpg" alt="Dell EMC World 2017 Project">
@@ -221,7 +233,7 @@
 	                        </div>
 	                    </a>
 	                </div>
-		    	<div class="item">
+					<!--<div class="item">
  	                    <a href="projects/words-that-flow">
  	                        <img class="coverImage" src="img/wordsthatflow_cover.jpg" alt="Words That Flow Project">
  	                        <div class="title">
@@ -229,7 +241,7 @@
  	                            <p>Chalk Lettering Installation</p>
  	                        </div>
  	                    </a>
- 	                </div>
+ 	                </div>-->
 		</div>
 	    </div> 
 	    <div class="neonpostitdoodle">
