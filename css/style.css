@@ -358,8 +358,8 @@ button:hover {
 }
 
 .IconsSet {
-	padding: 0 25px;
-	text-align: center;
+	/*padding: 0 25px;
+	text-align: center;*/
 }
 
 .mainFont {
@@ -403,11 +403,11 @@ button:hover {
 }
 
 .contactIcons {
-	margin: 20px 0;
-	width: 50%;
-	font-size: 50px;
+	margin: 10px 0;
+	width: 25%;
+	font-size: 30px;
 	float: left;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 .contactIcons a {
